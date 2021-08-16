@@ -10,8 +10,9 @@ a {
     text-decoration: none;
 }
 
+/* desktop first */
 html {
-    background: #181818;
+    background: #000;
     overflow: hidden;
 }
 #wrap {
@@ -44,6 +45,10 @@ html {
     border-bottom: 1.5px solid #999;
 }
 
+.header > .mobileBtn {
+    display: none;
+}
+
 #fullPage {
     width: 100%;
 }
@@ -51,7 +56,7 @@ html {
 .section {
     width: 100%; height: 100vh;
     position: relative;
-    background: #181818;
+    background: #000;
 }
 
 /* section1 */
@@ -69,7 +74,7 @@ img.logo {
 .section2 {
     width: 100%; height: 100%;
     position: relative;
-    background: #181818;
+    background: #000;
     z-index: 2;
 }
 .profileBox {
@@ -139,3 +144,80 @@ img.logo {
     transform: translate(-50%, -50%);
     font-size: 16px;
 }
+
+/* mobile */
+
+@media screen and (max-width:428px) {
+    #wrap {
+        width: 100%;
+        padding: 0 20px 0 20px;
+    }
+    /* Menu bar */
+    .header {
+        position: fixed;
+        width: 50px; height: 100%;
+        right: 0;
+        background: #000;
+    }
+    .header > .nav {
+        display: none;
+    }
+    .header > .nav2 {
+        width: 30px; height: 120px;
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+    .mobileBtn {
+        width: 30px; height: 120px;
+    }
+    
+    .mobileBtn > li > a {
+        width: 30px; height: 30px;
+        display: block;
+        margin: 0;
+        position: relative;
+    }
+    .mobileBtn > li > a > div {
+        content: "";
+        width: 10px; height: 10px;
+        border: 1px solid #fff;
+        border-radius: 5px;
+        position: relative;
+        top: 10px; left: 10px;
+    }
+    .mobileBtn > li > a > div.activeMenu {
+        background-color: #fff;
+    }
+
+    /* logo */
+    .section {
+        width: 100%; height: 100%;
+    }
+    img.logo {
+        width: 50%;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    /* profile */
+    .section2 {
+        width: 100%; height: 100%;
+    }
+    .section2 div.profileBox {
+        width: 100%; height: 100%;
+    }
+    .section img.proflieBg {
+        display: none;
+    }
+    .section div.profile {
+        width: 305px; height: 100%;
+        background-color: #fff;
+        padding: 20px;
+    }
+
+
+}
+
