@@ -1,0 +1,141 @@
+* {
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    color: #252525;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+html {
+    background: #181818;
+    overflow: hidden;
+}
+#wrap {
+    width: 66.66%;
+    margin: 0 auto;
+}
+ /* nav */
+ header {
+     width: 66.66%; height: 100px;
+     position: fixed;
+     z-index: 1000;
+     top: 50%;
+     transform: translate(0, -50%);
+ }
+.nav {
+    width: 100px;
+    float: right;
+    position: relative;
+    right: -110px;
+}
+.nav > ul > li {
+    text-align: left;
+    line-height: 24px;
+}
+.nav > ul > li > a {
+    color: #999;
+    font-size: 14px;
+}
+.nav > ul > li.on > a {
+    border-bottom: 1.5px solid #999;
+}
+
+#fullPage {
+    width: 100%;
+}
+/* section */
+.section {
+    width: 100%; height: 100vh;
+    position: relative;
+    background: #181818;
+}
+
+/* section1 */
+img.logo {
+    display: block;
+    width: 30vw;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: -2px;
+}
+
+/* section2 */
+.section2 {
+    width: 100%; height: 100%;
+    position: relative;
+    background: #181818;
+    z-index: 2;
+}
+.profileBox {
+    display: block;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+.profileBox .proflieBg {
+    display: block;
+    width: 100%;
+}
+.profile {
+    width: 100%; height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 100px;
+}
+.profile > h2 {
+    font-size: 16px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.profileTitle {
+    font-size: 14px;
+    font-weight: 550;
+    line-height: 30px;
+    display: block;
+    float: left;
+    margin-right: 32px;
+}
+.profileCont {
+    font-size: 14px;
+    line-height: 30px;
+    display: block;
+    float: left;
+}
+.toolsCont {
+    display: block;
+    float: left;
+    margin-right: 32px;
+}
+.profileImg {
+    width: 30%;
+    display: block;
+    float: right;
+}
+
+/* section3 */
+.circleBg {
+    width: 100%;
+    position: relative;
+    top: 50vh;
+    transform: translate(0, -50%);
+    padding-bottom: 100%;
+    background: #fff;
+    border-radius: 100%;
+    
+}
+.circleBg > h2 {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+}
