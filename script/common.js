@@ -22,7 +22,7 @@ var scroll = function(){
 
         $("html ,body").scrollTop(0);
         winResize();
-        
+
         $(window).resize(function(){
             winResize();
         });
@@ -36,15 +36,19 @@ var scroll = function(){
         let pagePos = 0;
 
         $('.nextPage').on('click', function(){
-            pagePos++;
+            if(pagePos < 3) {
+                pagePos += 1;
             moving(pagePos);
             return false;
+            };
         });
 
         $('.previousPage').on('click', function(){
-            pagePos--;
+            if (pagePos > 0) {
+              pagePos -= 1;
             moving(pagePos);
-            return false;
+            return false;  
+            };
         });
 
         $cnt.on("mousewheel", function(e){
