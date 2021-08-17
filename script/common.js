@@ -19,16 +19,34 @@ var scroll = function(){
     };
     
     var initEvent = function(){
+
         $("html ,body").scrollTop(0);
         winResize();
+        
         $(window).resize(function(){
             winResize();
         });
+
         $nav.on("click", function(){
             moveIndex = $(this).parent("li").index();
             moving(moveIndex);
             return false;
         });
+
+        let pagePos = 0;
+
+        $('.nextPage').on('click', function(){
+            pagePos++;
+            moving(pagePos);
+            return false;
+        });
+
+        $('.previousPage').on('click', function(){
+            pagePos--;
+            moving(pagePos);
+            return false;
+        });
+
         $cnt.on("mousewheel", function(e){
             if(time === false){ // time 변수가 펄스일때만 휠 이벤트 실행
               wheel(e);
@@ -70,4 +88,7 @@ var scroll = function(){
     
 };
 
+
 scroll();
+
+
