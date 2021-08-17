@@ -48,9 +48,11 @@ html {
 .header > .mobileBtn {
     display: none;
 }
-a.previousPage, a.nextPage {
+div.previousPage, div.nextPage {
     display: none;
 }
+
+
 
 #fullPage {
     width: 100%;
@@ -148,6 +150,8 @@ img.logo {
     font-size: 16px;
 }
 
+
+
 /* mobile */
 
 @media screen and (max-width:428px) {
@@ -180,41 +184,45 @@ img.logo {
         width: 30px; height: 30px;
         display: block;
         margin: 0;
-        position: relative;
+        position: absolute;
+        top: -10px; left: -10px;
     }
-    .mobileBtn > li > a > div {
+    .mobileBtn > li  {
         content: "";
         width: 10px; height: 10px;
         border: 1px solid #fff;
         border-radius: 5px;
         position: relative;
-        top: 10px; left: 10px;
+        top: 10px;
+        margin: 20px 10px 10px 10px;
     }
-    .mobileBtn > li > a > div.activeMenu {
+    .mobileBtn > li.on {
         background-color: #fff;
     }
 
-    a.previousPage {
+    div.previousPage {
         content: "";
         width: 30px; height: 30px;
         position: absolute;
-        left: 5px;
         top: 40px;
         display: block;
+        cursor: pointer;
     }
-    a.nextPage {
+    div.nextPage {
         content: "";
         width: 30px; height: 30px;
         position: absolute;
-        left: 5px;
         bottom: 40px;
         display: block;
+        cursor: pointer;
     }
     img.pageBtn {
         display: block;
-        width: 20px;
+        text-align: center;
+        width: 15px;
         position: absolute;
-        
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
     }
 
 
