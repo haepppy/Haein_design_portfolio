@@ -48,6 +48,9 @@ html {
 .header > .mobileBtn {
     display: none;
 }
+a.previousPage, a.nextPage {
+    display: none;
+}
 
 #fullPage {
     width: 100%;
@@ -191,6 +194,30 @@ img.logo {
         background-color: #fff;
     }
 
+    a.previousPage {
+        content: "";
+        width: 30px; height: 30px;
+        position: absolute;
+        left: 5px;
+        top: 40px;
+        display: block;
+    }
+    a.nextPage {
+        content: "";
+        width: 30px; height: 30px;
+        position: absolute;
+        left: 5px;
+        bottom: 40px;
+        display: block;
+    }
+    img.pageBtn {
+        display: block;
+        width: 20px;
+        position: absolute;
+        
+    }
+
+
     /* logo */
     .section {
         width: 100%; height: 100%;
@@ -208,14 +235,43 @@ img.logo {
     }
     .section2 div.profileBox {
         width: 100%; height: 100%;
+        padding-right: 30px;
     }
     .section img.proflieBg {
         display: none;
     }
     .section div.profile {
-        width: 305px; height: 100%;
+        width: 100%; height: 100%;
         background-color: #fff;
         padding: 20px;
+        padding-right: 50px;
+    }
+    .section div.profile h2 {
+        margin: 20px 0;
+        font-size: 14px;
+    }
+    .section div.profile div.profileTitle {
+        font-size: 12px;
+        margin-right: 16px;
+        position: absolute;
+        top: 345px;
+    }
+    .section div.profile div.profileCont {
+        font-size: 12px;
+        width: 178px;
+        position: absolute;
+        top: 345px;
+        left: 91px;
+    }
+    .section div.profile div.profileCont p.toolsCont {
+        margin-right: 16px;
+    }
+    .section div.profile img.profileImg {
+        width: 60%;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, 0);
+        top: 85px;
     }
 
 
