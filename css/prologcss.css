@@ -28,7 +28,6 @@ a {
 }
 
 li {
-
     margin-top: 16px;
 }
 .btn {
@@ -46,4 +45,32 @@ li {
 .btn:hover {
     background: #fff;
     font-weight: 550;
+}
+
+
+
+/* mobile */
+@media screen and (max-width:428px) {
+    .main {
+        width: 100%;
+    }
+    
+    .logo img {
+        width: 20%;
+    }
+    ul {
+        width: 150px;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    li {
+        margin-top: 12px;
+    }
+    .btn {
+        width: 150px; height: 44px;
+        line-height: 44px;
+        font-size: 12px;
+        border-radius: 14px;
+    }
 }
