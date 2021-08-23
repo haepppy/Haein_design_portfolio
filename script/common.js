@@ -33,20 +33,18 @@ var scroll = function(){
             return false;
         });
 
-        let pagePos = 0;
-
         $('.nextPage').on('click', function(){
-            if(pagePos < 3) {
-                pagePos += 1;
-            moving(pagePos);
+            if(moveIndex < 3) {
+                moveIndex += 1;
+            moving(moveIndex);
             return false;
             };
         });
 
         $('.previousPage').on('click', function(){
-            if (pagePos > 0) {
-              pagePos -= 1;
-            moving(pagePos);
+            if (moveIndex > 0) {
+                moveIndex -= 1;
+            moving(moveIndex);
             return false;  
             };
         });
@@ -88,6 +86,7 @@ var scroll = function(){
           time = false; // 휠 이벤트가 끝나면 false로 변경
         });
         $nav.parent("li").eq(index).addClass("on").siblings().removeClass("on");
+        $('.mobileBtn > li').eq(index).addClass("active").siblings().removeClass("active");
     };
     
 };
@@ -95,4 +94,13 @@ var scroll = function(){
 
 scroll();
 
-
+$(document).ready(function(){
+    $('div.openMenu').click(function() {
+        $('div.openMenu').css('display','none');
+        $('div.closeMenu, div.categoryOpen').css('display', 'block');
+    });
+    $('div.closeMenu').click(function() {
+        $('div.closeMenu, div.categoryOpen').css('display','none');
+        $('div.openMenu').css('display', 'block');
+    })
+});
