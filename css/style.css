@@ -251,7 +251,7 @@ img.logo {
     ul.category > li > a {
         color: #fff;
         font-size: 12px;
-        
+        line-height: 26px;
     }
 
     div.menuBtn img {
