@@ -41,14 +41,14 @@ html {
     color: #999;
     font-size: 14px;
 }
-.nav > ul > li.on > a {
+li.on > a {
     border-bottom: 1.5px solid #999;
 }
 
 .header > .mobileBtn {
     display: none;
 }
-div.previousPage, div.nextPage {
+div.previousPage, div.nextPage, div.menuBtn, .nav2, div.categoryOpen {
     display: none;
 }
 
@@ -169,15 +169,19 @@ img.logo {
     .header > .nav {
         display: none;
     }
-    .header > .nav2 {
+    .nav2 {
+        width: 30px; height: 120px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        z-index: 5;
+    }
+    ul.mobileBtn {
         width: 30px; height: 120px;
         display: block;
         position: relative;
-        top: 50%;
-        transform: translate(0, -50%);
-    }
-    .mobileBtn {
-        width: 30px; height: 120px;
+        top: -20px;
     }
     
     .mobileBtn > li > a {
@@ -196,8 +200,65 @@ img.logo {
         top: 10px;
         margin: 20px 10px 10px 10px;
     }
-    .mobileBtn > li.on {
+    .mobileBtn > li.active {
         background-color: #fff;
+    }
+
+    div.menuBtn {
+        width: 30px; height: 30px;
+        position: absolute;
+        top: 300px; left: 0;
+        display: block;
+        z-index: 5;
+    }
+    div.openMenu {
+        width: 30px; height: 30px;
+        position: absolute;
+        display: block;
+    }
+    div.closeMenu {
+        width: 30px; height: 30px;
+        position: absolute;
+        display: none;
+    }
+
+    div.categoryOpen {
+        height: 100%; width: 125px;
+        position: absolute;
+        right: 0; top: 0;
+        display: none;
+    }
+
+    div.categoryOpen > div.categoryBg {
+        width: 100%; height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+    }
+
+    ul.category {
+        position: absolute;
+        left: 10px;
+        width: 62px;
+        text-align: right;
+        top: 50%;
+        transform: translate(0, -50%);
+        margin-right: 10px;
+    }
+    ul.category > li {
+        width: 62px;
+        height: 30px;
+    }
+    ul.category > li > a {
+        color: #fff;
+        font-size: 12px;
+        
+    }
+
+    div.menuBtn img {
+        height: 15px;
+        display: block;
+        position: relative;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     div.previousPage {
@@ -207,6 +268,7 @@ img.logo {
         top: 40px;
         display: block;
         cursor: pointer;
+        z-index: 5;
     }
     div.nextPage {
         content: "";
@@ -215,6 +277,7 @@ img.logo {
         bottom: 40px;
         display: block;
         cursor: pointer;
+        z-index: 5;
     }
     img.pageBtn {
         display: block;
