@@ -1,0 +1,31 @@
+* {
+    margin: 0; padding: 0;
+}
+
+#wrap {
+    width: 1280px;
+    margin: 0 auto;
+}
+.desktopImg {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+.mobileImg {
+    display: none;
+}
+@media screen and (max-width:428px) {
+
+    #wrap {
+        width: 100%;
+        padding: 20px;
+    }
+    .mobileImg {
+        width: 100%;
+        display: block;
+    }
+    .desktopImg {
+        display: none;
+    }
+
+}
