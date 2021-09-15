@@ -4,7 +4,7 @@
     color: #000;
 }
 
-body {
+html {
     background: #000;
 }
 
@@ -19,13 +19,14 @@ body {
     width: 1280px; height: 150px;
     background: #fff;
     position: fixed;
+    margin: 0;
     z-index: 10;
 }
 
 .title h2 {
     width: 100%;
     font-size: 170px;
-    display: block;
+    display: inline-block;
     line-height: 130px;
     text-align: center;
 }
@@ -54,8 +55,7 @@ body {
 .imgBox {
     width: 260px; height: 260px;
     background: #fff;
-    display: block;
-    float: left;
+    display: inline-block;
     position: relative;
 }
 
@@ -76,7 +76,7 @@ body {
     transform: translate(-50%, -50%);
 }
 .textBox {
-    float: left;
+    display: inline-block;
     position: absolute;
     left: 280px;
     bottom: 0;
@@ -102,4 +102,58 @@ body {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* mobile */
+@media screen and (max-width:768px) {
+
+    html {
+        padding: 0 20px;
+    }
+    #wrap {
+        width: 100%;
+    }
+    .title {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        position: relative;
+        text-align: center;
+    }
+    .title > h2 {
+        font-size: 20vw;
+        line-height: 19vw;
+        display: inline;
+        
+    }
+
+    .contBox {
+        top: 0;
+    }
+    .cont {
+        width: 100%; height: auto;
+        padding: 12px;
+        text-align: center;
+    }
+    .cont > a {
+        height: 350px;
+    }
+    .imgBox {
+        padding: 12px;
+
+    }
+    .textBox {
+        position: relative;
+        left: 0;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        bottom: unset;
+    }
+    .footer {
+        height: 15vh;
+    }
+    .footer > p {
+        font-size: 12px;
+    }
 }
