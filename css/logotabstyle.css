@@ -33,6 +33,7 @@ html {
 
 .contBox {
     width: 100%;
+    background: #000;
     display: block;
     position: relative;
     top: 150px;
