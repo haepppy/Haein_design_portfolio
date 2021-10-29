@@ -176,13 +176,13 @@ p.hiLogoText {
     }
     #wrap {
         width: 100%;
-        padding: 20px;
     }
     .header h2 {
         font-size: 18px;
     }
     .cont {
         width: 100%;
+        padding: 0 20px;
         padding-top: 100px;
     }
     .mainLogo2 {
