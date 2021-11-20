@@ -1,0 +1,291 @@
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* {
+    color: #252525;
+    list-style: none;
+    text-decoration: none;
+    margin: 0; padding: 0;
+    font-size: 14px;
+    font-family: 'Noto Sans KR', sans-serif;
+    box-sizing: border-box;
+}
+
+/* span */
+span.bold {
+    font-weight: bold;
+}
+.last:last-child {
+    margin: 0;
+}
+
+#wrap {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    overflow: hidden;
+}
+.container {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.header {
+    width: 1280px; height: 200px;
+    margin: 0 auto;
+}
+
+/* 상단내비 */
+.linkText {
+    width: 100%; height: 50px;
+    position: relative;
+}
+.linkText > ul {
+    text-align: right;
+}
+.linkText > ul > li {
+    font-size: 11px;
+    line-height: 49px;
+    display: inline-block;
+    color: #999;
+}
+.linkText > ul > li > a {
+    font-size: 11px;
+    color: #999;
+}
+
+/* 상단 로고 영역 */
+.topLogoArea {
+    width: 100%; height: 100px;
+    position: relative;
+}
+.topLogoArea > a {
+    width: 100%; height: 100px;
+    position: relative;
+    display: block;
+}
+.topLogoArea > a > img {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* 내비게이션 */
+.nav {
+    width: 1280px; height: 50px;
+    margin: 0 auto;
+    position: relative;
+    text-align: left;
+    z-index: 10;
+}
+.nav > ul {
+    height: 50px;
+    line-height: 50px;
+    display: block;
+}
+.mainNav {
+    width: 92px; height: 50px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    text-align: center;
+    margin-right: 12px;
+}
+/* 서브 메뉴 */
+.subNav {
+    display: none;
+    background: #fff;
+}
+
+.mainBanner {
+    width: 100%; height: auto;
+    position: relative;
+    background: green;
+    overflow-x: hidden;
+}
+
+.banner {
+    width: 300vw;
+}
+.banner  li {
+    width: 100vw;
+    display: block;
+    float: left;
+}
+.banner  li  img {
+    width: 100%;
+    display: block;
+}
+.bannerItem {
+    width: 1280px; height: 50px;
+    z-index: 10;
+    position: absolute;
+    bottom: 50px; left: 50%;
+    transform: translateX(-50%);
+}
+.bannerItem > .arrowLeft {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+}
+.bannerItem > .arrowRight {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+}
+.arrowLeft > img, .arrowRight > img {
+    display: block;
+    height: 50px;
+    cursor: pointer;
+}
+.pointer {
+    line-height: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.pointer > li {
+    width: 10px; height: 10px;
+    border-radius: 10px;
+    background: #fff;
+    opacity: 0.5;
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.pointer > li.onPointer {
+    background: #fff;
+    opacity: 1;
+}
+
+.newProd {
+    width: 100%;
+    position: relative;
+    padding: 150px 0;
+}
+.newProd > h3 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 50px;
+}
+.newProdBox {
+    width: 100%;
+    margin-bottom: 50px;
+}
+li.prodArea {
+    width: 24%;
+    display: inline-block;
+    padding-right: 12px;
+}
+.thunmnail {
+    width: 100%;
+    position: relative;
+    margin-bottom: 10px;
+}
+.prodImg {
+    width: 100%;
+}
+.prodImg a {
+    width: 100%; height: 100%;
+    display: block;
+    position: relative;
+}
+.prodImg a > p {
+    display: none;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+.prodImg > a:hover > img {
+    filter: brightness(70%);
+}
+.prodImg > a:hover > p {
+    display: block;
+    z-index: 3;
+}
+.prodImg img {
+    width: 100%;
+    display: block;
+}
+.eventOff {
+    visibility: hidden;
+}
+span.eventIcon {
+    display: block;
+    position: absolute;
+    bottom: 10px; left: 10px;
+    z-index: 2;
+    cursor: pointer;
+}
+span.eventIcon > div {
+    width: 50px; height: 25px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 15px;
+    font-size: 11px;
+    line-height: 25px;
+    font-weight: 600;
+    color: #E87F24;
+}
+span.wishIcon {
+    display: block;
+    position: absolute;
+    bottom: 5px; right: 8px;
+    z-index: 2;
+    cursor: pointer;
+}
+span.wishIcon > img.wishImg {
+    display: block;
+    position: relative;
+    top: 3px;
+}
+.wishOn {
+    display: none;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.prodTextArea {
+    width: 100%;
+}
+.prodTextArea > a {
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+a.modelNum {
+    color: #999;
+    font-weight: lighter;
+}
+a.prodName {
+    font-size: 16px;
+}
+a.price {
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+span.reviewCount {
+    color: #999;
+    font-weight: normal;
+    float: right;
+    padding-right: 12px;
+}
+
+.moreBtn {
+    width: 200px; height: 40px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #252525;
+}
+.moreBtn:hover {
+    background: #E87F24;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+
